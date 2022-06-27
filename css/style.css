@@ -1,0 +1,13 @@
+*{
+    font-size: 16px;
+   
+}
+.note{
+    background-color:#fff;
+     border-style: inset;  
+     box-shadow: 4px 2px 4px rgba(0, 0, 0, .5);
+    padding: 1rem;
+    margin: 2rem 0;
+    border-left: 0.5rem solid rgb(17, 178, 206);
+    border-radius: 0.5rem;
+}
