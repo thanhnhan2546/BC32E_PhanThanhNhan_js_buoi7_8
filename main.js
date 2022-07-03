@@ -1,4 +1,4 @@
-var arr = [-9, -10, -1, -5, 0, 1, 2, 3, 4, 5];
+var arr = [];
 
 document.getElementById("btnNhapSo").onclick = function () {
   var so = Number(document.getElementById("nhapSo").value);
@@ -172,9 +172,13 @@ document.getElementById("kq_Bai6").onclick = function () {
   var vt1 = Number(document.getElementById("viTri1").value);
   var vt2 = Number(document.getElementById("viTri2").value);
 
-  var arrSwap = swapArray(arr, vt1, vt2);
-
-  document.getElementById("KQ6").innerHTML = "Mảng sau khi đổi chỗ: " + arrSwap;
+  if (vt1 > arr.length || vt1 < 0 || vt2 > arr.length || vt2 < 0) {
+    document.getElementById("KQ6").innerHTML = "Nhập sai vị trí trong mảng";
+  } else {
+    var arrSwap = swapArray(arr, vt1, vt2);
+    document.getElementById("KQ6").innerHTML =
+      "Mảng sau khi đổi chỗ: " + arrSwap;
+  }
 };
 /**
  * Đổi chỗ 2 phần tử trong mảng
@@ -264,7 +268,7 @@ document.getElementById("kq_Bai8").onclick = function () {
 };
 
 /**
-Bai 9:
+Bài 9:
 
 Đầu vào:
 - Một mảng số mới
@@ -297,7 +301,7 @@ document.getElementById("kq_Bai9").onclick = function () {
   }
 
   document.getElementById("KQ9").innerHTML =
-    "Sô nguyên trong mảng là: " + count;
+    "Số nguyên trong mảng là: " + count;
 };
 
 /**
